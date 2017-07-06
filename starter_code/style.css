@@ -1,59 +1,318 @@
-/*-------- Utility Styles --------*/
-* {
-	box-sizing: border-box; 
-	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
-	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+@media (max-width: 1134px) {
+
+	* {
+		box-sizing: border-box; 
+		/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
+		http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+	}
+
+	/* 
+		Use Google Fonts to make all of the text Proza Libre.
+
+		Make the Title twice as large as the body text, bold, and give it some nice margin.
+	*/
+
+	body {
+		font-family: 'Proza Libre', sans-serif;
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin: 20px;
+		padding: 15px 15px 15px 0;
+
+	}
+
+	/*-------- Main Styles --------*/
+
+	/* 
+		Make the main container the full width of the page.
+
+		Make the two inner containers (the form and the results) float side by side, on the left side of the screen.
+
+		Every container, form, input, and button should have rounded corners.
+	*/
+
+	#main {
+		display: block;
+		margin: 0 auto;
+	}
+
+	form {
+		width: 80%;
+		border-radius: 5px;
+		background: #E3E6EC;
+		margin: 50px auto;
+	}
+
+	.formGroup {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		padding: 20px;
+	}
+
+	#results_container {
+		position: relative;
+		max-width: 500px;
+		width: 100%;
+		border-radius: 5px;
+		background-color: #C8DBB3;
+		margin: 0 auto;
+	}
+
+	#results p {
+		padding: 20px;
+	}
+
+	input[type="text"], select {
+		border-radius: 5px;
+		height: 48px;
+		padding: 14px;
+	}
+
+	input[type="text"], textarea, select {
+		width: 100%;
+		border: 1px solid #CCC;
+		box-shadow: none; /*Is this what you mean by no default shadows?*/
+		padding: 15px;
+	}
+
+	button {
+		border-radius: 5px;
+		height: 48px;
+	}
+
+	textarea {
+		border-radius: 5px;
+		height: 100px;
+	}
+
+	label {
+		display: block;
+		text-align: left;
+		padding: 10px 0;
+	}
+
+	.radioButtons,
+	.checkboxes {
+		text-align: left;
+		padding: 0 0 0 10px;
+	}
+
+	.radioButtons label,
+	.checkboxes label {
+		display: inline-block;
+	}
+
+	input[type="submit"] {
+		display: inline;
+		float: right;
+		padding: 14px 20px;
+		background-color: rgba(39, 208, 127, 0.5);
+		font-weight: bold;
+		border-radius: 5px;
+		border: none;
+	}
+
+	input[type="submit"]:hover {
+		background-color: rgba(39, 208, 127, 1.0);
+	}
+
+	#clear_button {
+		display: none;
+		position: absolute;
+		bottom: -60px;
+		right: 0;
+		background-color: rgba(208, 60, 39, 0.5);
+		font-weight: bold;
+		border: none;
+		padding: 14px 20px;
+	}
+
+	#clear_button:hover {
+		background-color: rgba(208, 60, 39, 1.0);
+	}
 }
 
-/* 
-	Use Google Fonts to make all of the text Proza Libre.
 
-	Make the Title twice as large as the body text, bold, and give it some nice margin.
-*/
+@media (min-width: 1135px) {
+	/*-------- Utility Styles --------*/
 
-/*-------- Main Styles --------*/
+	* {
+		box-sizing: border-box; 
+		/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
+		http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+	}
 
-/* 
-	Make the main container the full width of the page.
+	/* 
+		Use Google Fonts to make all of the text Proza Libre.
 
-	Make the two inner containers (the form and the results) float side by side, on the left side of the screen.
+		Make the Title twice as large as the body text, bold, and give it some nice margin.
+	*/
 
-	Every container, form, input, and button should have rounded corners.
-*/
+	body {
+		font-family: 'Proza Libre', sans-serif;
+		font-size: 16px;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin: 20px;
+	}
+
+	/*-------- Main Styles --------*/
+
+	/* 
+		Make the main container the full width of the page.
+
+		Make the two inner containers (the form and the results) float side by side, on the left side of the screen.
+
+		Every container, form, input, and button should have rounded corners.
+	*/
+
+	#main {
+		width: 100%; 
+		height: 1000px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	form {
+		width: 50%;
+		float: left;
+		border-radius: 5px;
+		background: #E3E6EC;
+		margin: 15px;
+	}
+
+	.formGroup {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		padding: 20px;
+	}
+
+	#results_container {
+		position: relative;
+		max-width: 500px;
+		width: 50%;
+		float: left;
+		border-radius: 5px;
+		background-color: #C8DBB3;
+		margin: 15px 15px 15px 15px;
+	}
+
+	#results p {
+		padding: 20px;
+	}
+
+	input[type="text"], select {
+		border-radius: 5px;
+		height: 48px;
+		padding: 14px;
+	}
+
+	input[type="text"], textarea, select {
+		width: 100%;
+		border: 1px solid #CCC;
+		box-shadow: none; /*Is this what you mean by no default shadows?*/
+		padding: 15px;
+	}
+
+	button {
+		border-radius: 5px;
+		height: 48px;
+	}
+
+	textarea {
+		border-radius: 5px;
+		height: 100px;
+	}
+
+	label {
+		display: block;
+		text-align: left;
+		padding: 10px 0;
+	}
+
+	.radioButtons,
+	.checkboxes {
+		text-align: left;
+		padding: 0 0 0 10px;
+	}
+
+	.radioButtons label,
+	.checkboxes label {
+		display: inline-block;
+	}
+
+	input[type="submit"] {
+		display: inline;
+		float: right;
+		padding: 14px 20px;
+		background-color: rgba(39, 208, 127, 0.5);
+		font-weight: bold;
+		border-radius: 5px;
+		border: none;
+	}
+
+	input[type="submit"]:hover {
+		background-color: rgba(39, 208, 127, 1.0);
+	}
+
+	#clear_button {
+		display: none;
+		position: absolute;
+		bottom: -60px;
+		right: 0;
+		background-color: rgba(208, 60, 39, 0.5);
+		font-weight: bold;
+		border: none;
+		padding: 14px 20px;
+	}
+
+	#clear_button:hover {
+		background-color: rgba(208, 60, 39, 1.0);
+	}
+}
+
+
+
+
 
 /*-------- Form Styles --------*/
 
-
-/* 
-
-	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
+	/* DONE! The background should be #E3E6EC, and it should align to the middle of its container. */
 	
-	The background should be #E3E6EC, and it should align to the middle of its container.
-	
-	Every element should have nice, even padding or margin around it.
+	/* DONE! Every element should have nice, even padding or margin around it. */
 
-	.row elements should be spaced out so they're not touching.
+	/* DONE! I USED THE formGroup CLASS, THOUGH. .row elements should be spaced out so they're not touching. */
 
-	.formGroup elements should fill the width of their container, and be inline-block.
+	/* DONE! .formGroup elements should fill the width of their container, and be inline-block. */
 
-	The labels inside of .formGroup should be on their own line above form options, fill the width of their container, and have top/bottom padding.
+	/* DONE! The labels inside of .formGroup should be on their own line above form options, fill the width of their container, and have top/bottom padding.*/
 
-	Radio buttons and checkbox options should each be on their own line, and indented a little. 
+	/* DONE! Radio buttons and checkbox options should each be on their own line, and indented a little. */ 
 
-	Radio buttons and checkbox labels should be directly to the right of their corresponding inputs, and the text should vertically align with the inputs. 
+	/* DONE! Radio buttons and checkbox labels should be directly to the right of their corresponding inputs, and the text should vertically align with the inputs. */ 
 
-	Text inputs, submit buttons, and select boxes should all be at least 48px tall. The should have 14px of padding around their text. 
+	/* DONE! Text inputs, submit buttons, and select boxes should all be at least 48px tall. The should have 14px of padding around their text. */ 
 
-	Textareas should be at least 100px tall.
+	/* DONE! Textareas should be at least 100px tall. */
 
-	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.
+	/* DONE! Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows. */
 
-	The submit button should float to the right, be bolded, and only be as wide as the text makes it.
+	/* DONE! The submit button should float to the right, be bolded, and only be as wide as the text makes it. */
 
-	The submit button should be rga(39, 208, 127), but only 50% opacity. On hover, it should be 100% opacity.
+	/* DONE! The submit button should be rga(39, 208, 127), but only 50% opacity. On hover, it should be 100% opacity. */
 	
 	
-*/
+
 
 
 /*-------- Results Styles --------*/
@@ -61,7 +320,7 @@
 
 /* 
 
-	The results container should also fill the width of its container, but only up to 500px.
+	DONE! The results container should also fill the width of its container, but only up to 500px.
 
 	The results container should have a background color of #C8DBB3, and comfortable padding around the text.
 
